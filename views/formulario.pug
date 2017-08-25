@@ -1,0 +1,51 @@
+extends ./base.pug
+block contenido
+
+  div(class="container")
+    div(class="row")
+      h1 Lista de sócios
+
+    form(action="/grabar-socio", method="POST")
+      div(class="row")
+
+        div(class="input-field col s12 m6 l6")
+          label(for="nombre") Nome
+          input(type="text", name="nombre", placeholder="Nome", id="nombre")
+
+        div(class="input-field col s12 m6 l6")
+          label(for="apellido") Sobrenome
+          input(type="text", name="apellido", placeholder="Sobrenome", id="apellido")
+
+      div(class="row")
+
+        div(class="input-field col s12 m6 l6")
+          label(for="fechanacimiento") Data de nascimento
+          input(type="date", name="fechanacimiento", id="fechanacimiento" class="datepicker picker__input")
+
+        div(class="col s12 m6 l6")
+          label(for="region") Regiao
+          input(type="text", name="region", placeholder="Área de residencia", id="region")
+
+      div(class="row")
+        div(class="input-field col s12 m6 l6")
+          select(name="categoria")
+            option(disabled="", selected="") Escolha sua categoria de filiaçao
+            option(value="seguidor") Seguidor
+            option(value="dirigente") Dirigente
+            option(value="jugador") Jogador
+            option(value="tecnico") Técnico
+          label Categoria
+
+        div(class="input-field col s12 m6 l6")
+          label(for="hajugado") Você tem jogado cricket?
+          br
+          input(class="with-gap", name="hajugado", type="radio", id="hajugado1", value="Sim", checked)
+          label(for="hajugado1") Sim &nbsp;
+          input(class="with-gap", name="hajugado", type="radio", id="hajugado2", value="Nao" )
+          label(for="hajugado2") Nao
+
+      div.row
+        div(class="col s12 center")
+          input(type="submit", value="Enviar")
+
+

@@ -1,0 +1,8 @@
+extends ./base.pug
+block contenido
+  div(class="container")
+    p Sócio devidamente registrado
+
+    small Você será redirigido ao inicio em segundos
+  script.
+    setTimeout("window.location.href=\"/\"", 5000);

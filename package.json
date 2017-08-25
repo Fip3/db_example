@@ -1,0 +1,19 @@
+{
+  "name": "db-example",
+  "version": "1.0.0",
+  "description": "Base de Datos de prueba Node/Mongo/Express/Jade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.3",
+    "serve-favicon": "^2.4.3"
+  }
+}

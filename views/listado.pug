@@ -1,0 +1,23 @@
+extends ./base.pug
+
+block contenido
+  div(class="container")
+    h1(class="center blue-text") Lista de sócios
+    table(class="striped highlight")
+      tr
+        th Nome
+        th Sobrenome
+        th Data do nascimento
+        th Regiao
+        th Categoria
+        th Tem jogado cricket?
+
+      for s in socios
+        tr
+          td #{s.nombre}
+          td #{s.apellido}
+          td #{s.fechanacimiento}
+          td #{s.region}
+          td #{s.categoria}
+          td #{s.hajugado}
+
